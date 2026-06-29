@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2094840_satya_0_order</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Validate Delivery Area</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
+
+    if (current.delivery_type == 'home_delivery') {
+
+        var gr = new GlideRecord('x_2094840_satya_0_serviceable_pincode');
+
+        gr.addQuery('pincode', current.pincode);
+        gr.query();
+
+        if (gr.next()) {
+
+            if (!gr.delivery_available) {
+
+                gs.addErrorMessage('Home Delivery is not available for this pincode. Please choose Self Pickup.');
+                current.setAbortAction(true);
+
+            }
+
+        } else {
+
+            gs.addErrorMessage('Entered pincode is not serviceable. Please choose Self Pickup.');
+            current.setAbortAction(true);
+
+        }
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-22 09:22:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8740fb36472dc7103df7cbb9316d4315</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Validate Delivery Area</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Satya tailors" source="x_2094840_satya_0">a7bf99ca472d03103df7cbb9316d43fd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Satya tailors">a7bf99ca472d03103df7cbb9316d43fd</sys_scope>
+        <sys_update_name>sys_script_8740fb36472dc7103df7cbb9316d4315</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-22 10:13:32</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=8740fb36472dc7103df7cbb9316d4315"/>
+</record_update>

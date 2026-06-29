@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>custom_requirements</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-22 09:07:02</sys_created_on>
+        <sys_id>093d6bbe47e9c7103df7cbb9316d4311</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>custom_requirements</sys_name>
+        <sys_package display_value="Satya tailors" source="x_2094840_satya_0">a7bf99ca472d03103df7cbb9316d43fd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Satya tailors">a7bf99ca472d03103df7cbb9316d43fd</sys_scope>
+        <sys_update_name>sys_ui_policy_action_093d6bbe47e9c7103df7cbb9316d4311</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-22 09:07:02</sys_updated_on>
+        <table>x_2094840_satya_0_order</table>
+        <ui_policy display_value="Custom Size Requirements">2a3ceb7a47e9c7103df7cbb9316d43f3</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=093d6bbe47e9c7103df7cbb9316d4311"/>
+</record_update>
