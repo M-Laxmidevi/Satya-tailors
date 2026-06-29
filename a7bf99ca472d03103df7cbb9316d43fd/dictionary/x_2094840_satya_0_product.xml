@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="e0fd75c6472143103df7cbb9316d4302" label="Product" max_length="40" name="x_2094840_satya_0_product" type="collection">
+        <element label="Fabric Type" max_length="40" name="fabric_type" type="string"/>
+        <element choice="3" label="Category" max_length="40" name="category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Trouser" sequence="4" value="trouser"/>
+                <element inactive_on_update="false" label="Pant" sequence="2" value="pant"/>
+                <element inactive_on_update="false" label="Blazar" sequence="3" value="blazar"/>
+                <element inactive_on_update="false" label="Kurta" sequence="1" value="kurta"/>
+                <element inactive_on_update="false" label="Shirt" sequence="0" value="shirt"/>
+                <element inactive_on_update="false" label="FullSleeve Shirt" sequence="5" value="fullsleeve_shirt"/>
+            </choice>
+        </element>
+        <element display="true" label="Product Name" max_length="40" name="product_name" type="string"/>
+        <element label="Description" max_length="40" name="description" type="journal"/>
+        <element label="Active" max_length="255" name="active" type="boolean"/>
+        <element label="Product Image" max_length="255" name="product_image" type="user_image"/>
+        <element label="Available Sizes" max_length="40" name="available_sizes" type="string"/>
+        <element label="Estimated Delivery" max_length="40" name="estimated_delivery" type="string"/>
+        <element label="Price" max_length="40" name="price" type="currency"/>
+        <element label="Available" max_length="40" name="available" type="boolean"/>
+    </element>
+</database>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="ea798596476983103df7cbb9316d43a9" label="Review Table" max_length="40" name="x_2094840_satya_0_review_table" type="collection">
+        <element choice="1" label="Approval status" max_length="40" name="approval_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+            </choice>
+        </element>
+        <element label="Order" max_length="32" name="order" reference="x_2094840_satya_0_order" type="reference"/>
+        <element label="Review Date" max_length="40" name="review_data" type="glide_date_time"/>
+        <element choice="1" label="Rating" max_length="40" name="rating" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="3 Stars" sequence="2" value="3 Stars"/>
+                <element inactive_on_update="false" label="1 Star" sequence="0" value="1 Star"/>
+                <element inactive_on_update="false" label="5 Stars" sequence="4" value="5 Stars"/>
+                <element inactive_on_update="false" label="4 Stars" sequence="3" value="4 Stars"/>
+                <element inactive_on_update="false" label="2 Stars" sequence="1" value="2 Stars"/>
+            </choice>
+        </element>
+        <element label="Review Image" max_length="40" name="review_image" type="user_image"/>
+        <element label="Comment" max_length="40" name="comment" type="string"/>
+        <element label="Customer" max_length="32" name="customer" reference="x_2094840_satya_0_customer" type="reference"/>
+        <index name="index">
+            <element name="customer"/>
+        </index>
+        <index name="index2">
+            <element name="order"/>
+        </index>
+    </element>
+</database>

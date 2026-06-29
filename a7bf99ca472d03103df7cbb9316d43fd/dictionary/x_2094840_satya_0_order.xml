@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="eff2781a47a583103df7cbb9316d4300" label="Order" max_length="40" name="x_2094840_satya_0_order" type="collection">
+        <element label="Custom Requirements" max_length="120" name="custom_requirements" type="string"/>
+        <element label="Total Price" max_length="40" name="total_price" type="currency"/>
+        <element label="Delivery Address" max_length="40" name="delivery_address" type="string"/>
+        <element choice="3" label="Delivery Type" max_length="40" name="delivery_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Self Pickup" sequence="1" value="self_pickup"/>
+                <element inactive_on_update="false" label="Home Delivery" sequence="0" value="home_delivery"/>
+            </choice>
+        </element>
+        <element display="true" label="Order number" max_length="40" name="order_number" type="string"/>
+        <element label="Pincode" max_length="40" name="pincode" type="string"/>
+        <element label="Product" max_length="32" name="product" reference="x_2094840_satya_0_product" type="reference"/>
+        <element choice="3" label="Size" max_length="40" name="size" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="M" sequence="1" value="m"/>
+                <element inactive_on_update="false" label="XXL" sequence="4" value="xxl"/>
+                <element inactive_on_update="false" label="S" sequence="0" value="s"/>
+                <element inactive_on_update="false" label="XL" sequence="3" value="xl"/>
+                <element inactive_on_update="false" label="L" sequence="2" value="l"/>
+                <element inactive_on_update="false" label="Custom" sequence="5" value="custom"/>
+            </choice>
+        </element>
+        <element choice="1" label="Order Status" max_length="40" name="order_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Out for  Delivery" sequence="6" value="out_for_delivery"/>
+                <element inactive_on_update="false" label="Quality Check" sequence="4" value="quality_check"/>
+                <element inactive_on_update="false" label="Delivered" sequence="7" value="delivered"/>
+                <element inactive_on_update="false" label="Cutting" sequence="2" value="cutting"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="8" value="cancelled"/>
+                <element inactive_on_update="false" label="Placed" sequence="0" value="placed"/>
+                <element inactive_on_update="false" label="Accepted" sequence="1" value="accepted"/>
+                <element inactive_on_update="false" label="Ready" sequence="5" value="ready"/>
+                <element inactive_on_update="false" label="Stitching" sequence="3" value="stitching"/>
+            </choice>
+        </element>
+        <element label="Measurement Image" max_length="255" name="measurement_image" type="user_image"/>
+        <element label="Customer" max_length="32" name="customer" reference="x_2094840_satya_0_customer" type="reference"/>
+        <index name="index">
+            <element name="customer"/>
+        </index>
+        <index name="index2">
+            <element name="product"/>
+        </index>
+    </element>
+</database>

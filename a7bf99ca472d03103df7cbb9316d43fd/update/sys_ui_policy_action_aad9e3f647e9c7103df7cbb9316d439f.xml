@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>delivery_address</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-22 08:53:20</sys_created_on>
+        <sys_id>aad9e3f647e9c7103df7cbb9316d439f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>delivery_address</sys_name>
+        <sys_package display_value="Satya tailors" source="x_2094840_satya_0">a7bf99ca472d03103df7cbb9316d43fd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Satya tailors">a7bf99ca472d03103df7cbb9316d43fd</sys_scope>
+        <sys_update_name>sys_ui_policy_action_aad9e3f647e9c7103df7cbb9316d439f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-22 08:53:20</sys_updated_on>
+        <table>x_2094840_satya_0_order</table>
+        <ui_policy display_value="Home Delivery Address Policy">2ad8e37647e9c7103df7cbb9316d43b6</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=aad9e3f647e9c7103df7cbb9316d439f"/>
+</record_update>
